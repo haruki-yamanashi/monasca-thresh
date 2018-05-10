@@ -230,7 +230,7 @@ public class AlarmThresholdingBolt extends BaseRichBolt {
     for (final MetricDefinitionAndTenantId mdtid : alarm.getAlarmedMetrics()) {
       alarmedMetrics.add(mdtid.metricDefinition);
     }
-    logger.debug("Alarm {} transitioned from {} to {}", alarm, initialState, alarm.getState());
+    logger.info("Alarm {} transitioned from {} to {}", alarm, initialState, alarm.getState());
     AlarmStateTransitionedEvent event =
         new AlarmStateTransitionedEvent(alarmDefinition.getTenantId(), alarm.getId(),
             alarmDefinition.getId(), alarmedMetrics, alarmDefinition.getName(),
