@@ -17,9 +17,9 @@
     </appender>
 
 
-    <logger name="monasca" level = "info"/>
+    <logger name="monasca" level = "debug"/>
 
-    <root level="info">
+    <root level="debug">
         <appender-ref ref="STDOUT" />
         <appender-ref ref="FILE" />
     </root>
